@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+    <script src="js/script.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <div class="main-content">
+            <div class="search-bar">
+                <input type="text" id="city" placeholder="Search for a city">
+                <button id="search-button" onclick="getWeather()">Search</button>
+                <div class="toggle-container">
+                    <label class="toggle-switch">
+                        <input type="checkbox" id="temp-toggle" onchange="toggleTemperature()">
+                        <span class="slider"></span>
+                    </label>
+                    <span class="toggle-label">°F / °C</span>
+                </div>
+            </div>
+            <div id="initial-message">
+                Enter a city name to get weather information
+            </div>
+            <div class="current-weather">
+                <h1 id="city-name"></h1>
+                <p id="chance-of-rain"></p>
+                <p class="current-temp" id="current-temp"></p>
+                <div class="weather-icon" id="weather-icon"></div>
+            </div>
+            <div class="hourly-forecast" id="hourly-forecast"></div>
+            <div class="air-conditions">
+                <h2>Air Conditions</h2>
+                <div class="air-condition-row">
+                    <div>
+                        <p>Feels Like</p>
+                        <p id="real-feel"></p>
+                    </div>
+                    <div>
+                        <p>Humidity</p>
+                        <p id="humidity"></p>
+                    </div>
+                </div>
+                <div class="air-condition-row">
+                    <div>
+                        <p>Chance of rain</p>
+                        <p id="rain-chance"></p>
+                    </div>
+                    <div>
+                        <p>UV Index</p>
+                        <p id="uv-index"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="sidebar">
+            <h2>7-DAY FORECAST</h2>
+            <div class="weekly-forecast" id="weekly-forecast"></div>
+        </div>
+    </div>
+</body>
+</html>
